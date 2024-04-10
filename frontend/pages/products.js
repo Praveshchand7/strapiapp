@@ -21,10 +21,7 @@ const Products = (props) => {
                   <div class="bg-gray-100 p-6 rounded-lg">
                     <img
                       class="h-40 rounded w-full object-cover object-center mb-6"
-                      src={
-                        item.attributes.image.data &&
-                        item.attributes.image.data.attributes.name
-                      }
+                      src={item.attributes.image.data.attributes.name}
                       alt="content"
                     />
                     <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
@@ -45,14 +42,11 @@ const Products = (props) => {
                       {item.attributes.description}
                     </p>
 
-                   
-                      <Link  href={`/product/${item.attributes.slug}`}> 
-                        <button class="my-2 text-white bg-indigo-500 border-0 py-1 md:py-2 md:px-4 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                           Buy Now{" "}
-                        </button>{" "}
-                      </Link>
-                    
-                    
+                    <Link href={`/product/${item.attributes.slug}`}>
+                      <button class="my-2 text-white bg-indigo-500 border-0 py-1 md:py-2 md:px-4 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                        Buy Now{" "}
+                      </button>{" "}
+                    </Link>
                   </div>
                 </div>
               );
